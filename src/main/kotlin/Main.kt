@@ -1,6 +1,8 @@
 fun main() {
     // Primitive data types in Kotlin
     dataTypeFunction()
+    // Variables in Kotlin
+    variableFunction()
 
 }
 
@@ -136,4 +138,36 @@ fun arrayFunction() {
     for (i in Array) {
         println(i)
     }
+}
+
+fun variableFunction() {
+    // This function has basics of variable.
+    // Variables in Kotlin can be declared using 'val' for immutable variables and 'var' for mutable variables.
+
+    /*
+    * variables are declared using two types
+    * 1. val: Immutable variable (read-only)
+    * 2. var: Mutable variable (can be changed)
+    * */
+
+    val immutableVariable = "I am immutable"
+    println(immutableVariable)
+
+    var mutableVariable = "I am mutable"
+    println(mutableVariable)
+
+    mutableVariable = "I can change"
+    println(mutableVariable)
+
+    // Type inference
+    val inferredType = 42 // Kotlin infers this as Int
+    println("Inferred type: $inferredType")
+
+    // Scope of variables
+    if (true) {
+        val localVariable = "I am local to this block"
+        println(localVariable)
+    }
+    // Uncommenting the next line will cause an error because localVariable is not accessible here
+    // println(localVariable) // This will cause an error
 }
